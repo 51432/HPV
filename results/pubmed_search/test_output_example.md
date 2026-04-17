@@ -1,0 +1,3 @@
+| PMID | 英文标题 | 中文标题 | 发表日期 | 期刊名 | PubMed链接 | 英文摘要 | 中文摘要 |
+|---|---|---|---|---|---|---|---|
+| 00000000 | Example title for format demonstration | 用于格式演示的示例标题 | 2026-01-01 | Nature | [链接](https://pubmed.ncbi.nlm.nih.gov/00000000/) | No abstract available in this example. | 无摘要 |

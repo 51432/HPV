@@ -96,3 +96,21 @@ See details in:
 ## Current Stage
 
 This commit establishes the **planning and documentation scaffold** for early-phase project setup.
+
+## PubMed 检索 Skill
+
+本仓库新增了可复用 skill：`skills/pubmed-search/`，用于在固定高影响期刊范围内执行 PubMed E-utilities 检索，并导出中英文摘要结果到 `results/pubmed_search/`。
+
+快速开始：
+```bash
+python skills/pubmed-search/scripts/pubmed_search.py \
+  --keywords "HPV integration clonality" \
+  --start-date 2020/01/01 \
+  --end-date 2026/12/31 \
+  --retmax 20
+```
+
+详细说明见：
+- `skills/pubmed-search/SKILL.md`
+- `skills/pubmed-search/references/example_commands.md`
+- `skills/pubmed-search/references/test_io_examples.md`
