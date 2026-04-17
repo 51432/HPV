@@ -1,58 +1,57 @@
-# HPV Integration Clonality and Local Regulatory Rewiring
+# HPV 整合克隆性与局部调控重塑研究仓库
 
-> A biology-driven, mechanism-focused, and reproducible research repository for studying the axis:
-> **HPV integration clonality → local cis-regulatory remodeling → sustained activation of nearby host genes**.
+> 一个以生物学问题为驱动、以机制研究为核心、支持可复现分析的科研仓库。  
+> 主线：**HPV 克隆性整合 → 局部顺式调控重塑 → 邻近宿主基因持续激活**。
 
-## Project Positioning
+## 项目定位
 
-This repository is **not** primarily an HPV integration-caller development project.  
-It is designed for:
-- Mechanism-oriented hypothesis development;
-- Structured literature synthesis;
-- Stepwise multi-omics analysis planning and execution;
-- Reproducible organization of data, code, results, and figures.
+本仓库**不是**单纯的 HPV 整合检测工具开发项目，而是用于组织以下工作：
+- 围绕核心科学问题构建可检验假说；
+- 进行结构化文献调研与证据沉淀；
+- 规划并执行多组学机制分析；
+- 规范化管理数据、脚本、结果与图表，确保可复现。
 
-Core research motivation:
-1. HPV integration events show heterogeneous clonality across samples.
-2. Genes near integration breakpoints are frequently overexpressed.
+当前研究动机：
+1. HPV 整合事件在样本间存在克隆性差异；
+2. HPV 整合位点附近基因常出现过表达。
 
-Main scientific question:
-- Does HPV integration remodel local genome/chromatin/regulatory architecture (e.g., accessibility, enhancer wiring, 3D boundaries, CN/SV context), thereby driving persistent activation of nearby host genes?
-- Are high-clonality integration events more likely to induce such activation and be retained under tumor evolution/selection?
+核心科学问题：
+- HPV 整合是否会改变局部基因组结构/染色质开放性/顺式调控环境，从而驱动邻近基因持续激活？
+- 高克隆性整合事件是否更可能引发上述效应，并在肿瘤演化中被选择保留？
 
-## Core Hypothesis Framework
+## 核心假说框架
 
-### Primary hypotheses
-- **H1 (cis-regulatory rewiring):** HPV integration can reconfigure local cis-regulatory context and elevate nearby host-gene expression.
-- **H2 (clonality-selection coupling):** Integration events with stronger gene-activating/regulatory effects show higher clonality and are more likely to be selected.
+### 主假说
+- **H1（局部调控重塑）**：HPV 整合可重构局部顺式调控环境，导致邻近基因表达上调。
+- **H2（克隆性-选择耦合）**：具有更强激活效应的整合事件更易呈现高克隆性并被保留。
 
-### Mechanistic sub-hypotheses (priority order)
-1. Local chromatin accessibility gain (ATAC-like signal increase around breakpoints)
-2. Enhancer hijacking / enhancer adoption near integration sites
-3. CTCF/TAD or local 3D boundary perturbation
-4. Local CN gain/amplification and/or complex SV-mediated activation
-5. Episomal/integrated hybrid states or ecDNA-related amplification effects (if data supports)
+### 优先机制路径（建议顺序）
+1. 局部染色质开放性增强
+2. 增强子劫持 / 增强子重连
+3. CTCF/TAD/局部 3D 边界扰动
+4. 局部拷贝数增益与复杂结构变异共驱动
+5. 复杂扩增单元或 ecDNA 相关机制（若数据支持）
 
-### Alternative hypotheses
-- Apparent cis-effects are confounded by broad CNA programs, lineage-state transitions, purity, or stromal composition.
-- High clonality reflects early timing or mutational process exposure, not selective advantage from expression activation.
+### 备选解释（需排除）
+- 观察到的表达升高由广泛 CNV、肿瘤纯度或细胞状态变化驱动，而非整合局部效应；
+- 高克隆性仅代表事件发生更早，不代表功能选择优势。
 
-## Planned Research Modules (Aims)
+## 研究模块（Aims）
 
-1. **Integration event curation and clonality quantification**
-2. **Nearby gene dysregulation and distance-decay cis-effect analysis**
-3. **Regulatory context annotation (accessibility/enhancer/3D/SV/CN)**
-4. **Productive integration identification and candidate driver loci ranking**
-5. **Mechanistic model integration and falsification analysis**
+1. 整合事件整理与克隆性量化
+2. 邻近基因异常表达与距离衰减分析
+3. 调控环境注释（开放性/增强子/3D/CN/SV）
+4. productive integration 筛选与候选驱动位点排序
+5. 机制模型整合与替代假说检验
 
-See details in:
+详见：
 - `docs/project_scope.md`
 - `docs/biological_hypothesis.md`
 - `docs/literature_review_plan.md`
 - `docs/analysis_plan.md`
 - `docs/risk_and_alternatives.md`
 
-## Suggested Repository Structure
+## 仓库目录建议
 
 ```text
 .
@@ -64,44 +63,54 @@ See details in:
 │   ├── analysis_plan.md
 │   └── risk_and_alternatives.md
 ├── refs/
-│   └── literature/                 # paper notes, PDFs index, extracted evidence tables
-├── metadata/                       # sample sheets, cohort manifests, annotation versions
-├── workflow/                       # workflow specs (e.g., Snakemake/Nextflow plans), run manifests
-├── scripts/                        # modular analysis scripts (R/Python/bash)
-├── notebooks/                      # exploratory notebooks (clearly versioned/frozen)
+│   └── literature/                 # 文献笔记与证据表
+├── metadata/                       # 样本清单、注释版本、字段字典
+├── workflow/                       # 工作流定义与运行清单
+├── scripts/                        # 分析脚本（R/Python/bash）
+├── notebooks/                      # 探索性分析 notebook
 ├── data/
-│   ├── raw/                        # immutable inputs (tracked via pointers/manifest)
-│   └── processed/                  # derived matrices/tables
-├── results/                        # final tables and intermediate analysis outputs
-├── figures/                        # publication-quality figures and panel sources
+│   ├── raw/                        # 原始数据（建议只放索引/清单）
+│   └── processed/                  # 衍生数据矩阵与中间结果
+├── results/                        # 表格结果与阶段输出
+├── figures/                        # 图表与面板源文件
 └── issues/
-    └── issues_draft.md             # copy-ready GitHub issue drafts
+    └── issues_draft.md             # 可直接复制创建的 issue 草稿
 ```
 
-## Milestone Roadmap (Draft)
+## 里程碑（草案）
 
-- **M1: Question framing + literature baseline**
-- **M2: Event/clonality data model + QC baseline**
-- **M3: Cis-effect quantification + candidate productive integrations**
-- **M4: Multi-omics mechanism validation and robustness tests**
-- **M5: Manuscript-grade outputs and reproducibility freeze**
+- **M1：课题定义 + 文献基线**
+- **M2：整合/克隆性数据模型 + 质量控制**
+- **M3：局部 cis 效应量化 + 候选 productive integration**
+- **M4：多组学机制验证与稳健性分析**
+- **M5：结果冻结与复现检查（论文级输出）**
 
-## Working Principles
+## 工作原则
 
-- Biology-first, tool-second.
-- Every analysis step should map to a falsifiable biological question.
-- Keep provenance explicit (data version, annotation version, software versions).
-- Separate exploratory vs. frozen analysis outputs.
+- 生物学问题优先，工具开发服务于问题验证；
+- 每一步分析都要映射到可证伪的科学问题；
+- 明确数据版本、注释版本与参数来源；
+- 区分探索性结果与冻结版本结果。
 
-## Current Stage
+## 当前阶段
 
-This commit establishes the **planning and documentation scaffold** for early-phase project setup.
+当前仓库已完成前期规划骨架，适合进入：
+1) 文献证据矩阵构建；2) 事件级数据整理；3) Aim1/Aim2 原型分析。
 
-## PubMed 检索 Skill
+---
 
-本仓库新增了可复用 skill：`skills/pubmed-search/`，用于在固定高影响期刊范围内执行 PubMed E-utilities 检索，并导出中英文摘要结果到 `results/pubmed_search/`。
+## PubMed 文献检索 Skill（中文说明）
 
-快速开始：
+本仓库已提供可复用 skill：`skills/pubmed-search/`，用于在固定高影响期刊范围内调用 PubMed E-utilities 检索文献，并导出中英文结果到 `results/pubmed_search/`。
+
+### 功能
+- 支持参数：关键词、起止日期、返回上限、仅有摘要筛选、文章类型筛选；
+- 获取字段：PMID、英文标题、发表日期、期刊名、PubMed 链接、英文摘要；
+- 自动生成中文标题与中文摘要（可关闭翻译）；
+- 导出 Markdown 表格与 CSV。
+
+### 快速开始
+
 ```bash
 python skills/pubmed-search/scripts/pubmed_search.py \
   --keywords "HPV integration clonality" \
@@ -110,7 +119,8 @@ python skills/pubmed-search/scripts/pubmed_search.py \
   --retmax 20
 ```
 
-详细说明见：
-- `skills/pubmed-search/SKILL.md`
-- `skills/pubmed-search/references/example_commands.md`
-- `skills/pubmed-search/references/test_io_examples.md`
+### 相关文档
+- Skill 说明：`skills/pubmed-search/SKILL.md`
+- 示例命令：`skills/pubmed-search/references/example_commands.md`
+- 测试输入输出示例：`skills/pubmed-search/references/test_io_examples.md`
+
